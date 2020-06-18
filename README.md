@@ -5,4 +5,4 @@ For search a combo in a .txt
 If you have something like this:
 ![Alt text](img/unknown.png?raw=true "img1")
 This program take all the user:pass and replace the original text file for the new one:
-![Alt text](img/unknown.png?raw=true "img2")
+![Alt text](img/unknown2.png?raw=true "img2")
