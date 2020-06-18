@@ -1,0 +1,46 @@
+#----------------------Libraries---------------------------#
+import re, os, time
+from colorama import Fore, init
+from subprocess import Popen
+#----------------------/Libraries---------------------------#
+
+#----------------------Credits---------------------------#
+init()
+
+print(Fore.LIGHTBLUE_EX + '\n ███╗░░██╗███████╗██╗░░██╗░█████╗░░░░░░░░██████╗░█████╗░███╗░░██╗')
+print(Fore.LIGHTBLUE_EX + ' ████╗░██║██╔════╝██║░██╔╝██╔══██╗░░░░░░██╔════╝██╔══██╗████╗░██║')
+print(Fore.LIGHTBLUE_EX + ' ██╔██╗██║█████╗░░█████═╝░██║░░██║█████╗╚█████╗░███████║██╔██╗██║')
+print(Fore.LIGHTBLUE_EX + ' ██║╚████║██╔══╝░░██╔═██╗░██║░░██║╚════╝░╚═══██╗██╔══██║██║╚████║')
+print(Fore.LIGHTBLUE_EX + ' ██║░╚███║███████╗██║░╚██╗╚█████╔╝░░░░░░██████╔╝██║░░██║██║░╚███║')
+print(Fore.LIGHTBLUE_EX + ' ╚═╝░░╚══╝╚══════╝╚═╝░░╚═╝░╚════╝░░░░░░░╚═════╝░╚═╝░░╚═╝╚═╝░░╚══╝')
+print(Fore.LIGHTCYAN_EX + '\n                      Discord: Neko-san#4592' + Fore.RESET + '\n')
+print(' #-----------------------------------------------------------------#\n')
+#----------------------/Credits---------------------------#
+
+#----------------------Functions---------------------------#
+def function():
+    # Search combo
+    global name
+    file = open(name,'r')
+    file = file.read()
+    combo = re.findall('([a-zA-Z0-9._]+@\w+.\w+:[^ \n]+)[ \n]', file)
+    rcombo = '\n'.join(combo)
+
+    # Overwrite .txt
+    print(Fore.LIGHTYELLOW_EX + '[·] Creating' + Fore.RESET)
+    time.sleep(0.5)
+    print(rcombo)
+    filename = open(name, 'w')
+    filename.write(rcombo)
+    filename.close()
+    print(Fore.LIGHTGREEN_EX + '\n[·] Created succesfully!' + Fore.RESET)
+    
+#----------------------/Functions---------------------------#
+
+#----------------------Principal Code---------------------------#
+print(Fore.LIGHTWHITE_EX + ' Path and name of file to search from' + Fore.RESET)
+name = input(' => ')
+function()
+print(Fore.LIGHTMAGENTA_EX + '\n[·] Press any button to close' + Fore.RESET)
+input()
+#----------------------/Principal Code---------------------------#
